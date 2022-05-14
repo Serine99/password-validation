@@ -8,18 +8,24 @@
 </head>
 <body>
     <div class="container" >
-        <label for="email"> Email:
-            <input type="email" name="" id ="email" placeholder="Email" >
-        </label>
-        <br>
-        <hr>
-    </div>
-    <div>
-        <label for="password"> Password:
-            <input type="password" name=" " id= "password" placeholder="password" onkayup = "return validate()">
-        </label>
+        <label for="email"> Username:</label>
+        <input type="text" name="" id ="username" placeholder="username" >
+        <label for="password"> Password:</label>
+        <input type="password" name=" " id= "password" placeholder="password" oninput = "return validate()">
+        <div class = "errors">
+            <ul>
+                <li id="upper" > Atleast one uppercase </li>
+                <li id="lower"> Atleast one lowercase </li>
+                <li id="char"> Atleast one special symbol </li>
+                <li id="number"> Atleast one number</li>
+                <li id="length"> Min 8 and max 16 characters</li>
+            </ul>
+
+        </div>
     </div>
 
+
+</div>
 </body>
 <script src="main.js"></script>
 </html>
