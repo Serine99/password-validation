@@ -1,2 +1,2 @@
-# password-valiation
+# password-validation
  
