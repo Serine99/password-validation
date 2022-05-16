@@ -5,23 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <div class="container" >
+       <form action="">
+        <div>
         <label for="email"> Username:</label>
-        <input type="text" name="" id ="username" placeholder="username" >
+        <input type="text" name="" id ="username" placeholder="username" oninput="return validateUserName()">
+     </div> 
+     <div class = "errors">
+        <ul>
+            <li id="lower0"> Only lowercase </li>
+            <li id="number0"> At least one number</li>
+            <li id="length0"> Min 3 and max 20 characters</li>
+        </ul>
+
+    </div>
+     <br>
+     <div> 
         <label for="password"> Password:</label>
-        <input type="password" name=" " id= "password" placeholder="password" oninput = "return validate()">
+        <input type="password" name=" " id= "password" placeholder="password" oninput = "return validatePassword()">
+    </div>  
         <div class = "errors">
             <ul>
-                <li id="upper" > Atleast one uppercase </li>
-                <li id="lower"> Atleast one lowercase </li>
-                <li id="char"> Atleast one special symbol </li>
-                <li id="number"> Atleast one number</li>
+                <li id="upper" > At least one uppercase </li>
+                <li id="lower"> At least one lowercase </li>
+                <li id="char"> At least one special symbol </li>
+                <li id="number"> At least one number</li>
                 <li id="length"> Min 8 and max 16 characters</li>
+            
             </ul>
 
         </div>
+        <button type="button" id="submit">Submit</button>
+    </form>
     </div>
 
 
